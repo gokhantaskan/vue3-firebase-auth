@@ -1,0 +1,22 @@
+@import "tailwindcss.css";
+@import "reset.css";
+
+body {
+  @apply tw-font-sans;
+}
+
+/* TEMPORARY STYLES START */
+a {
+  @apply tw-text-blue-500 tw-no-underline hocus:tw-underline;
+}
+
+input {
+  @apply tw-border tw-rounded tw-p-2;
+}
+
+button {
+  min-height: 42px;
+  cursor: pointer;
+  @apply tw-bg-blue-500 tw-text-white tw-rounded;
+}
+/* TEMPORARY STYLES END */

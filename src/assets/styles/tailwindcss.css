@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  *,
+  *::before,
+  *::after {
+    border-width: 0;
+    border-style: solid;
+    @apply tw-border-gray-300 dark:tw-border-gray-600;
+  }
+}
+
+@layer utilities {
+  .tw-font-sans {
+    font-optical-sizing: auto;
+    font-style: normal;
+  }
+}
