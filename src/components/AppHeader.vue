@@ -24,7 +24,7 @@ const { user } = storeToRefs(useUserStore());
       </nav>
 
       <div class="flex-vertically-aligned">
-        <span>{{ user?.email }}</span>
+        <RouterLink :to="{ name: 'SettingsRoot' }">{{ user?.email }}</RouterLink>
         <LogoutWrapper v-slot="{ logout }">
           <button
             class="tw-ml-auto"

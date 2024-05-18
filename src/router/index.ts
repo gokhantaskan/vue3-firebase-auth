@@ -47,6 +47,19 @@ const router = createRouter({
           name: "AboutView",
           component: () => import("@/views/app/about.vue"),
         },
+        {
+          path: "settings",
+          name: "SettingsRoot",
+          component: () => import("@/views/app/settings.vue"),
+          redirect: { name: "AccountSettingsView" },
+          children: [
+            {
+              path: "account",
+              name: "AccountSettingsView",
+              component: () => import("@/views/app/settings/account.vue"),
+            },
+          ],
+        },
       ],
     },
   ],
