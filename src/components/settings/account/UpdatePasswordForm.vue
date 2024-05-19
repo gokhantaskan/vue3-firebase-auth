@@ -11,7 +11,7 @@ const form = ref({
   confirmNewPassword: "",
 });
 
-async function handleResetPassword() {
+async function handleUpdatePassword() {
   const user = auth?.currentUser;
 
   if (!user?.email || form.value.newPassword !== form.value.confirmNewPassword) {
@@ -31,16 +31,16 @@ async function handleResetPassword() {
 </script>
 
 <template>
+  <h3>Update Password</h3>
+
   <form
     class="tw-space-y-4"
-    @submit.prevent="handleResetPassword"
+    @submit.prevent="handleUpdatePassword"
   >
-    <h3>Reset Password</h3>
-
     <div class="tw-grid">
-      <label for="current-password">Current Password</label>
+      <label for="p-current-password">Current Password</label>
       <input
-        id="current-password"
+        id="p-current-password"
         v-model="form.currentPassword"
         placeholder="Current password"
         type="password"
@@ -49,9 +49,9 @@ async function handleResetPassword() {
     </div>
 
     <div class="tw-grid">
-      <label for="new-password">New Password</label>
+      <label for="p-new-password">New Password</label>
       <input
-        id="new-password"
+        id="p-new-password"
         v-model="form.newPassword"
         placeholder="New password"
         type="password"
@@ -60,9 +60,9 @@ async function handleResetPassword() {
     </div>
 
     <div class="tw-grid">
-      <label for="confirm-new-password">Confirm New Password</label>
+      <label for="p-confirm-new-password">Confirm New Password</label>
       <input
-        id="confirm-new-password"
+        id="p-confirm-new-password"
         v-model="form.confirmNewPassword"
         placeholder="Confirm new password"
         type="password"
